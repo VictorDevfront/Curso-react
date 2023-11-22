@@ -3,6 +3,7 @@ import './App.css'
 
 export default function App() {
 
+
   const textoDestaque={
     color:'#00f',
     fontSize:'3em'
@@ -17,7 +18,6 @@ const msglogin=()=>{
 const msglogoff=()=>{
   return 'Favor logar'
 }
-
 
   const cumprimento=()=>{
     const hora= new Date().getHours()
@@ -54,6 +54,7 @@ const msglogoff=()=>{
       onChange={(e)=>setNome(e.target.value)}
      />
     <p>Nome digitado:{nome}</p>
+
     </>
-);
+  );
 }
