@@ -1,7 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './App.css'
 
 export default function App() {
+
+  localStorage.setItem("nome", "Victor")
+  localStorage.getItem("nome")
+  localStorage.removeItem("nome")
+
+  const [contagem,setContagem]=useState(0)
+
+  useEffect(
+()=>{
+  console.log("Página carregada")
+  document.title='Contagem'+contagem
+}
+  )
 
 
   const textoDestaque={
@@ -54,6 +67,8 @@ const msglogoff=()=>{
       onChange={(e)=>setNome(e.target.value)}
      />
     <p>Nome digitado:{nome}</p>
+    <p>Contagem:{contagem}</p>
+    <button onClick={()=>setContagem(contagem)}>Contar</button>
 
     </>
   );
