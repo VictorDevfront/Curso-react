@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import './App.css'
 
+
 export default function App() {
 
   localStorage.setItem("nome", "Victor")
@@ -69,7 +70,6 @@ const msglogoff=()=>{
     <p>Nome digitado:{nome}</p>
     <p>Contagem:{contagem}</p>
     <button onClick={()=>setContagem(contagem)}>Contar</button>
-
     </>
   );
 }
